@@ -1,0 +1,34 @@
+version: "3"
+
+vars: {}
+dotenv: [".env"]
+
+tasks:
+  # 初期環境構築用タスク
+  setup:
+    desc: Setup project.
+    deps:
+      - clean
+    cmds:
+      - npm install
+  clean:
+    # rmは環境によって利用できないのでgit cleanを利用する。
+    desc: Clean files.
+    cmds:
+      - git clean -fdx node_modules
+      - git clean -fdx out
+
+  # linter, formatter
+  lint:
+    desc: Lint files.
+    cmds:
+      - dprint check
+      - npx prettier --check "**/*.{yml,yaml}"
+      - npx prettier --check "**/*.ts"
+      - npx cspell lint . --no-progress
+  format:
+    desc: Format files.
+    cmds:
+      - dprint fmt
+      - npx prettier --write "**/*.{yml,yaml}"
+      - npx prettier --write "**/*.ts"

@@ -1,0 +1,17 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "cmds",
+    "dotenv",
+    "dprint",
+    "iimuz"
+  ],
+  "dictionaries": [],
+  "ignorePaths": [
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/out/**",
+    "**/package-lock.json"
+  ]
+}
