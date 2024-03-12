@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    // Editor
+    "EditorConfig.EditorConfig",
+    // Linter, Formatter
+    "DavidAnson.vscode-markdownlint", // markdown
+    "dbaeumer.vscode-eslint", // typescript
+    "dprint.dprint", // json, markdown
+    "esbenp.prettier-vscode", // yml, typescript
+    "streetsidesoftware.code-spell-checker", // spell checker
+    // text
+    "streetsidesoftware.code-spell-checker",
+    // vscode extension
+    "ms-vscode.extension-test-runner"
+  ]
+}
